@@ -23,25 +23,9 @@ namespace РасчетГСМ
             InitializeComponent();
         }
         public string StringConn = @"Data Source=GREYBOX;Initial Catalog=Cardatabase;Integrated Security=True";
-        private void distance_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void litersPer100Km_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void fuelCostPerLiter_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+      
         private void calculatebutton1_Click(object sender, EventArgs e)
         {
             try
@@ -71,26 +55,7 @@ namespace РасчетГСМ
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
       
-        }
-
-        private void comboBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-
-        }
-
-        private void fuelConsumption_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void totalFuelCost_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void clear_Click(object sender, EventArgs e)
         {
@@ -127,9 +92,5 @@ namespace РасчетГСМ
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -76,7 +76,6 @@
             this.distance.Name = "distance";
             this.distance.Size = new System.Drawing.Size(234, 47);
             this.distance.TabIndex = 0;
-            this.distance.TextChanged += new System.EventHandler(this.distance_TextChanged);
             // 
             // litersPer100Km
             // 
@@ -86,7 +85,7 @@
             this.litersPer100Km.Name = "litersPer100Km";
             this.litersPer100Km.Size = new System.Drawing.Size(234, 47);
             this.litersPer100Km.TabIndex = 2;
-            this.litersPer100Km.TextChanged += new System.EventHandler(this.litersPer100Km_TextChanged);
+
             // 
             // fuelCostPerLiter
             // 
@@ -96,7 +95,7 @@
             this.fuelCostPerLiter.Name = "fuelCostPerLiter";
             this.fuelCostPerLiter.Size = new System.Drawing.Size(234, 47);
             this.fuelCostPerLiter.TabIndex = 3;
-            this.fuelCostPerLiter.TextChanged += new System.EventHandler(this.fuelCostPerLiter_TextChanged);
+           
             // 
             // label1
             // 
@@ -119,7 +118,7 @@
             this.label2.Size = new System.Drawing.Size(357, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ваш средний расход на 100 км";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // label3
             // 
@@ -160,8 +159,8 @@
             this.comboBox1.Size = new System.Drawing.Size(234, 37);
             this.comboBox1.TabIndex = 18;
             this.comboBox1.ValueMember = "Consumption";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
+            
+           
             // 
             // autoBindingSource
             // 
@@ -194,7 +193,7 @@
             this.fuelConsumption.Size = new System.Drawing.Size(219, 53);
             this.fuelConsumption.TabIndex = 21;
             this.fuelConsumption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fuelConsumption.TextChanged += new System.EventHandler(this.fuelConsumption_TextChanged);
+            
             // 
             // totalFuelCost
             // 
@@ -206,7 +205,7 @@
             this.totalFuelCost.Size = new System.Drawing.Size(217, 53);
             this.totalFuelCost.TabIndex = 22;
             this.totalFuelCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.totalFuelCost.TextChanged += new System.EventHandler(this.totalFuelCost_TextChanged);
+            
             // 
             // label4
             // 
@@ -312,7 +311,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            
             // 
             // pictureBox3
             // 
