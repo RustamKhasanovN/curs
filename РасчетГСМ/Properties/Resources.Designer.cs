@@ -63,6 +63,76 @@ namespace РасчетГСМ.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2501873_fuel_fuel_full_meter_gas_gasoline_icon {
+            get {
+                object obj = ResourceManager.GetObject("2501873_fuel_fuel full_meter_gas_gasoline_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2784208_finance_business_money_coin_icon {
+            get {
+                object obj = ResourceManager.GetObject("2784208_finance_business_money_coin_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _825448_automobile_cars_magnifying_glass_search_searchicons_icon {
+            get {
+                object obj = ResourceManager.GetObject("825448_automobile_cars_magnifying glass_search_searchicons_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8673344_ic_fluent_gas_filled_icon {
+            get {
+                object obj = ResourceManager.GetObject("8673344_ic_fluent_gas_filled_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9025790_gas_pump_icon {
+            get {
+                object obj = ResourceManager.GetObject("9025790_gas_pump_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9652709_asphalt_highway_journey_road_street_icon {
+            get {
+                object obj = ResourceManager.GetObject("9652709_asphalt_highway_journey_road_street_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap auto_icon {
+            get {
+                object obj = ResourceManager.GetObject("auto_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap camaro_car_icon {
             get {
                 object obj = ResourceManager.GetObject("camaro_car_icon", resourceCulture);
