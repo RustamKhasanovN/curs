@@ -22,10 +22,10 @@ namespace РасчетГСМ
         {
             InitializeComponent();
         }
-        public string StringConn = @"Data Source=GREYBOX;Initial Catalog=Cardatabase;Integrated Security=True";
+        
        
 
-      
+       //кнопка расчета
         private void calculatebutton1_Click(object sender, EventArgs e)
         {
             try
@@ -49,14 +49,14 @@ namespace РасчетГСМ
             }
             catch (FormatException)
             {
-                MessageBox.Show("Поля не заполнены");
+                MessageBox.Show("Поля не заполнены или заполнены неправильно");
             }
 
 
         }
 
       
-
+        //кнопка очистки
         private void clear_Click(object sender, EventArgs e)
         {
             comboBox1.Text = "";
@@ -66,6 +66,8 @@ namespace РасчетГСМ
             fuelConsumption.Text = "";
             totalFuelCost.Text = "";
         }
+
+        //кнопка выхода
 
         private void exit_Click(object sender, EventArgs e)
         {
