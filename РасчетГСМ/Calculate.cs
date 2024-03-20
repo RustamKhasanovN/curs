@@ -31,12 +31,12 @@ namespace РасчетГСМ
             try
             {
                 double a;  //distance
-                double b;  //litersPer100Km
+                double b;  //comboBox2consumption
                 double c;  //fuelCostPerLiter
 
 
                 a = Convert.ToDouble(distance.Text);
-                b = Convert.ToDouble(litersPer100Km.Text);
+                b = Convert.ToDouble(comboBox2consumption.Text);
                 c = Convert.ToDouble(fuelCostPerLiter.Text);
 
 
@@ -61,7 +61,7 @@ namespace РасчетГСМ
         {
             comboBox1.Text = "";
             distance.Text = "";
-            litersPer100Km.Text = "";
+            comboBox2consumption.Text = "";
             fuelCostPerLiter.Text = "";
             fuelConsumption.Text = "";
             totalFuelCost.Text = "";
@@ -92,5 +92,14 @@ namespace РасчетГСМ
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2consumption_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculate));
             this.distance = new System.Windows.Forms.TextBox();
-            this.litersPer100Km = new System.Windows.Forms.TextBox();
             this.fuelCostPerLiter = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +57,8 @@
             this.autoTableAdapter = new РасчетГСМ.CardatabaseDataSetTableAdapters.autoTableAdapter();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.comboBox2consumption = new System.Windows.Forms.ComboBox();
+            this.autoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.autoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -66,43 +67,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // distance
             // 
             this.distance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.distance.Location = new System.Drawing.Point(655, 205);
+            this.distance.Location = new System.Drawing.Point(655, 298);
             this.distance.Multiline = true;
             this.distance.Name = "distance";
             this.distance.Size = new System.Drawing.Size(234, 47);
             this.distance.TabIndex = 0;
             // 
-            // litersPer100Km
-            // 
-            this.litersPer100Km.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.litersPer100Km.Location = new System.Drawing.Point(655, 284);
-            this.litersPer100Km.Multiline = true;
-            this.litersPer100Km.Name = "litersPer100Km";
-            this.litersPer100Km.Size = new System.Drawing.Size(234, 47);
-            this.litersPer100Km.TabIndex = 2;
-
-            // 
             // fuelCostPerLiter
             // 
             this.fuelCostPerLiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fuelCostPerLiter.Location = new System.Drawing.Point(655, 365);
+            this.fuelCostPerLiter.Location = new System.Drawing.Point(655, 383);
             this.fuelCostPerLiter.Multiline = true;
             this.fuelCostPerLiter.Name = "fuelCostPerLiter";
             this.fuelCostPerLiter.Size = new System.Drawing.Size(234, 47);
             this.fuelCostPerLiter.TabIndex = 3;
-           
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(172, 207);
+            this.label1.Location = new System.Drawing.Point(172, 300);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(437, 31);
             this.label1.TabIndex = 4;
@@ -113,19 +104,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(172, 286);
+            this.label2.Location = new System.Drawing.Point(172, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(357, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ваш средний расход на 100 км";
-            
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(173, 367);
+            this.label3.Location = new System.Drawing.Point(173, 385);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(356, 31);
             this.label3.TabIndex = 6;
@@ -158,9 +148,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(234, 37);
             this.comboBox1.TabIndex = 18;
-            this.comboBox1.ValueMember = "Consumption";
-            
-           
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // autoBindingSource
             // 
@@ -193,7 +181,6 @@
             this.fuelConsumption.Size = new System.Drawing.Size(219, 53);
             this.fuelConsumption.TabIndex = 21;
             this.fuelConsumption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
             // 
             // totalFuelCost
             // 
@@ -205,7 +192,6 @@
             this.totalFuelCost.Size = new System.Drawing.Size(217, 53);
             this.totalFuelCost.TabIndex = 22;
             this.totalFuelCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
             // 
             // label4
             // 
@@ -311,7 +297,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
-            
             // 
             // pictureBox3
             // 
@@ -326,7 +311,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::РасчетГСМ.Properties.Resources._9025790_gas_pump_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(80, 275);
+            this.pictureBox2.Location = new System.Drawing.Point(80, 190);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(75, 66);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -336,7 +321,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::РасчетГСМ.Properties.Resources._9652709_asphalt_highway_journey_road_street_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(80, 279);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,12 +352,32 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "в рублях";
             // 
+            // comboBox2consumption
+            // 
+            this.comboBox2consumption.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.autoBindingSource, "Consumption", true));
+            this.comboBox2consumption.DataSource = this.autoBindingSource;
+            this.comboBox2consumption.DisplayMember = "Consumption";
+            this.comboBox2consumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox2consumption.FormattingEnabled = true;
+            this.comboBox2consumption.Location = new System.Drawing.Point(655, 207);
+            this.comboBox2consumption.Name = "comboBox2consumption";
+            this.comboBox2consumption.Size = new System.Drawing.Size(234, 37);
+            this.comboBox2consumption.TabIndex = 34;
+            this.comboBox2consumption.ValueMember = "Consumption";
+            this.comboBox2consumption.SelectedIndexChanged += new System.EventHandler(this.comboBox2consumption_SelectedIndexChanged);
+            // 
+            // autoBindingSource1
+            // 
+            this.autoBindingSource1.DataMember = "auto";
+            this.autoBindingSource1.DataSource = this.cardatabaseDataSet;
+            // 
             // Calculate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(924, 824);
+            this.Controls.Add(this.comboBox2consumption);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -396,7 +401,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fuelCostPerLiter);
-            this.Controls.Add(this.litersPer100Km);
             this.Controls.Add(this.distance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Calculate";
@@ -411,6 +415,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +424,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox distance;
-        private System.Windows.Forms.TextBox litersPer100Km;
         private System.Windows.Forms.TextBox fuelCostPerLiter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -446,6 +450,8 @@
         private CardatabaseDataSetTableAdapters.autoTableAdapter autoTableAdapter;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox2consumption;
+        private System.Windows.Forms.BindingSource autoBindingSource1;
     }
 }
 
