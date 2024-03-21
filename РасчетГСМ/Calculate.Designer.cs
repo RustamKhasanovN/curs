@@ -148,7 +148,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(234, 37);
             this.comboBox1.TabIndex = 18;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            
             // 
             // autoBindingSource
             // 
@@ -364,7 +364,7 @@
             this.comboBox2consumption.Size = new System.Drawing.Size(234, 37);
             this.comboBox2consumption.TabIndex = 34;
             this.comboBox2consumption.ValueMember = "Consumption";
-            this.comboBox2consumption.SelectedIndexChanged += new System.EventHandler(this.comboBox2consumption_SelectedIndexChanged);
+            
             // 
             // autoBindingSource1
             // 

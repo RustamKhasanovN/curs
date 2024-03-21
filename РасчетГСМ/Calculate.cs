@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
+
+
 
 
 namespace РасчетГСМ
@@ -91,17 +91,6 @@ namespace РасчетГСМ
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2consumption_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
